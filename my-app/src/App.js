@@ -11,33 +11,37 @@ import ConditionalRenderingFunctional from "./components/ConditionalRenderingFun
 import NestingComponents from "./components/NestingComponents";
 import MethodsAsPropsParent from "./components/MethodsAsPropsParent";
 import RenderingLists from "./components/RenderingLists";
+import Content from "./components/Content";
+import Clock from "./components/Clock";
 
 function App() {
-  return (
-    // <div className={css.App}>
-    <div className={css.App}>
-      {/* Add your components here */}
-      <StatefulGreeting
-        greeting="I'm a stateful class component!"
-        name="Mike"
-      />
-      <Sidebar />
-      <NavBarSimple />
-      <EventsFunctional />
-      <EventsClass />
-      <EventBinding />
-      <ConditionalRenderingFunctional connected={false} />
-      <ConditionalRenderingClass />
-      <NestingComponents />
-      <MethodsAsPropsParent />
-      <br></br>
-      <br></br>
-      <NavBarForm />
-      <br></br>
-      <br></br>
-      <RenderingLists />
-    </div>
-  );
+	return (
+		// <div className={css.App}>
+		<div className={css.App}>
+			{/* Add your components here */}
+			<StatefulGreeting
+				greeting="I'm a stateful class component!"
+				name="Mike"
+			/>
+			<Sidebar />
+			<NavBarSimple />
+			<EventsFunctional />
+			<EventsClass />
+			<EventBinding />
+			<ConditionalRenderingFunctional connected={false} />
+			<ConditionalRenderingClass />
+			<NestingComponents />
+			<MethodsAsPropsParent />
+			<br></br>
+			<br></br>
+			<NavBarForm />
+			<br></br>
+			<br></br>
+			<RenderingLists />
+			<Content />
+			<Clock />
+		</div>
+	);
 }
 
 export default App;
