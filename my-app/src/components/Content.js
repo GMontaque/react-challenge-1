@@ -2,11 +2,28 @@ import React, { Component } from "react";
 import css from "./css/Content.module.css";
 import { savedPosts } from "../posts.json";
 import PostItem from "./PostItem";
+import Loader from "./Loader";
 
 export class Content extends Component {
 	// emplty constructor
 	constructor(props) {
 		super(props);
+		this.state = {
+			isLoaded: false,
+		};
+	}
+	displayData() {
+		console.log("displayData() called");
+		setTimeout(() => {
+			console.log("Data fetched!");
+			this.setState({
+				isLoaded: true,
+			});
+		}, 2000);
+	}
+	componentDidMount() {
+		console.log("Component mounted");
+		this.displayData();
 	}
 	render() {
 		return (
@@ -25,9 +42,13 @@ export class Content extends Component {
 							</div>
 						);
 					})} */}
-					{savedPosts.map((post) => {
-						return <PostItem key={post.title} entry={post} />;
-					})}
+					{!this.state.isLoaded ? (
+						<Loader />
+					) : (
+						savedPosts.map((post) => {
+							return <PostItem key={post.title} entry={post} />;
+						})
+					)}
 				</div>
 			</div>
 		);
