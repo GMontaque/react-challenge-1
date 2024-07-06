@@ -23,6 +23,11 @@ import ControlledFormHooks from "./components/ControlledFormHooks";
 import UseStateWithArrays from "./components/UseStateWithArrays";
 import UseStateWithObjects from "./components/UseStateWithObjects";
 import StatefulGreetingWithPrevState from "./components/StatefulGreetingWIthPrevState";
+import UseEffectCounter from "./components/UseEffectCounter";
+import Tester from "./components/Tester";
+import UseEffectCounterContainer from "./components/UseEffectCounterContainer";
+import ContentHooks from "./components/ContentHooks";
+import HTTPRequests from "./components/HTTPRequests";
 
 function App() {
 	return (
@@ -48,7 +53,7 @@ function App() {
 			<br></br>
 			<br></br>
 			<RenderingLists />
-			<Content />
+
 			<Clock />
 			<LifeCyclesCDM />
 			<LifeCyclesCDU />
@@ -60,6 +65,12 @@ function App() {
 			<UseStateWithArrays />
 			<UseStateWithObjects />
 			<StatefulGreetingWithPrevState />
+			<UseEffectCounter />
+			<Tester />
+			<UseEffectCounterContainer />
+			{/* <Content /> */}
+			<ContentHooks />
+			<HTTPRequests />
 		</div>
 	);
 }
